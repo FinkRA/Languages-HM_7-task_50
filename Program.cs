@@ -5,3 +5,17 @@
 // 5 9 2 3
 // 8 4 2 4
 // 17 -> такого числа в массиве нет
+
+// Я ТАК ПОНЯЛ ЧТО МАССИВ НАМ ЗАДАН ДО ОБЩЕНИЯ С ПОЛЬЗОВАТЕЛЕМ ПОЭТОМУ ВОТ ТАК СКУЧНО 
+int[,] array = new int[3, 4] {{1, 4, 7, 2}, {5, 9, 2, 3}, {8, 4, 2, 4}};
+
+Console.Write("Введите позицию элемента: ");
+int position = Convert.ToInt32(Console.ReadLine());
+
+if (position > array.Length - 1) Console.WriteLine("Такого числа в массиве нет.");
+else
+{
+    int x = position / 4;
+    int y = position % 4;
+    Console.WriteLine(array[x, y]);
+}
